@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Gold Price
  * Plugin URI: http://omniwp.com.br/plugins/woocommerce-gold-price/
  * Description: Adds a Gold Price for 22k/24k gold products, making easy to update their prices
- * Version: 1.0
+ * Version: 1.0.1
  * Author: omniWP
  * Author URI: http://omniwp.com.br
  * Requires at least: 3.0
@@ -122,7 +122,7 @@ function woocommerce_gold_price() {
 	<h3><?php echo $key ?></h3>
 	<ol>
 	<?php
-			$the_query = new WP_Query( array( 'post_type' => 'product', 'meta_key' => 'karat', 'meta_value' => substr( $key, 0, -1) ) ); // meta value = 24 or 22
+			$the_query = new WP_Query( array( 'post_type' => 'product', 'posts_per_page'=>-1, 'meta_key' => 'karat', 'meta_value' => substr( $key, 0, -1) ) ); // meta value = 24 or 22
 			// The Loop
 			while ( $the_query->have_posts() ) :
 				$the_query->the_post();

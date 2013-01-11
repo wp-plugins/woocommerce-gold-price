@@ -58,10 +58,14 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed 'posts_per_page'		
 = 1.0 =
 * Initial plugin release.
 
 == Upgrade Notice ==
 
+= 1.0.1 =
+* All users must upgrade
 = 1.0 = 
 * Enjoy it.
