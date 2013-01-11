@@ -39,7 +39,7 @@ Please notice that WooCommerce must be installed and active.
 
 * Only 24k and 22k
 
-= Do I need to calculate the price when adding a new gold product?=
+= Do I need to calculate the price when adding a new gold product? =
 
 * Only if you are not going to update the gold price.
 
