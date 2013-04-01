@@ -3,7 +3,7 @@ Contributors: Gabriel Reguly
 Donate link: http://omniwp.com.br/donate/
 Tags: WooCommerce, Gold Price, Gold Based prices 
 Requires at least:3.5
-Tested up to: 3.5
+Tested up to: 3.5.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -37,7 +37,7 @@ Please notice that WooCommerce must be installed and active.
 
 = How many karats can be added/used? =
 
-* Only 24k and 22k
+* Only 24k, 22k and 18k
 
 = Do I need to calculate the price when adding a new gold product? =
 
@@ -58,6 +58,8 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Changelog ==
 
+= 1.0.2 =
+* Fixed 'You do not have sufficient permissions to access this page.', added 18k
 = 1.0.1 =
 * Fixed 'posts_per_page'		
 = 1.0 =
@@ -65,6 +67,8 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Upgrade Notice ==
 
+= 1.0.2 =
+* All users must upgrade
 = 1.0.1 =
 * All users must upgrade
 = 1.0 = 
