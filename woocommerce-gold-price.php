@@ -2,8 +2,8 @@
 /**
  * Plugin Name: WooCommerce Gold Price
  * Plugin URI: http://omniwp.com.br/plugins/woocommerce-gold-price/
- * Description: Adds a Gold Price for 18k/22k/24k gold products, making easy to update their prices
- * Version: 1.0.2
+ * Description: Adds a Gold Price for 14k/18k/22k/24k gold products, making easy to update their prices
+ * Version: 1.0.3
  * Author: omniWP
  * Author URI: http://omniwp.com.br
  * Requires at least: 3.0
@@ -119,23 +119,22 @@ function woocommerce_gold_price() {
 <?php
 		$options = get_option( 'woocommerce_gold_price_options' );
 		if ( ! $options ) {
-			$options = array( '24k' => 0, '22k' => 0, '18k' => 0 );
+			$options = array( '24k' => 0, '22k' => 0, '18k' => 0, '14k' => 0 );
 		}
 		foreach( $options as $key => $value ) {
 	?>
 	<h3><?php echo $key ?></h3>
-	<ol>
 	<?php
 			$the_query = new WP_Query( array( 'post_type' => 'product', 'posts_per_page'=>-1, 'meta_key' => 'karat', 'meta_value' => substr( $key, 0, -1) ) ); // meta value = 24, 22, 18
 			if ( 0 == $the_query->found_posts ) { 
-				echo '
-		<li>' . __('No products', 'woocommerce-gold-price' ) . '</li>';
+				_e('No products', 'woocommerce-gold-price' );
 			} else {
-			
+				echo '
+	<ol>';
 			// The Loop			
 				while ( $the_query->have_posts() ) :
 					$the_query->the_post();
-					$the_product = new WC_Product( $the_query->post->ID );
+					$the_product = get_product( $the_query->post->ID );
 					$edit_url    = admin_url( 'post.php?post=' . $the_product->id . '&action=edit' );
 					$message     = '';
 					echo '
@@ -158,14 +157,13 @@ function woocommerce_gold_price() {
 					}
 					echo ' ' . $message . '</li>';			
 				endwhile;
+				echo '
+	</ol>';
 			}
 			// Restore original Query & Post Data
 			wp_reset_query();
 			wp_reset_postdata();
-	?>
-	</ol>
-	<?php
-			}
+		}
 ?>			
 </div>
 <?php
@@ -239,6 +237,29 @@ function woocommerce_gold_price() {
 		<td>
 <?php
 		$input = '<input id="woocommerce_gold_price_options_18" name="woocommerce_gold_price_options[18k]" size="10" type="text" value="' . $options['18k'] . '" />';
+		switch ($currency_pos) {
+			case 'left' :
+				echo $currency_symbol . $input;
+			break;
+			case 'right' :
+				echo $input . $currency_symbol;
+			break;
+			case 'left_space' :
+				echo $currency_symbol . '&nbsp;' . $input;
+			break;
+			case 'right_space' :
+				echo $input . '&nbsp;' . $currency_symbol;
+			break;
+		}
+?>		
+		</td>
+		<td><?php echo $weight_unit_description[ $weight_unit ] ?></td>
+	  </tr>
+	  <tr valign="top" class="alternate">
+		<th scope="row"><label for="woocommerce_gold_price_options_14">14k</label></th>
+		<td>
+<?php
+		$input = '<input id="woocommerce_gold_price_options_14" name="woocommerce_gold_price_options[14k]" size="10" type="text" value="' . $options['14k'] . '" />';
 		switch ($currency_pos) {
 			case 'left' :
 				echo $currency_symbol . $input;

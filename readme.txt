@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds Gold Price extension to WooCommerce plugin
+Adds Gold Price extension to WooCommerce plugin, tested up to WooCommerce 2.0.8
 
 == Description ==
 
@@ -25,7 +25,7 @@ Please notice that WooCommerce must be installed and active.
 1. Activate the plugin
 1. Insert/Edit a product in WooCommerce
 1. Fill in its weight value
-1. Add new/Use existing Custom Field named 'karat', with values 24 or 22 to indicate the purity of the gold  
+1. Add new/Use existing Custom Field named 'karat', with values 24, 22, 18 or 14 to indicate the purity of the gold  
 1. Update the gold price at WooCommerce -> Gold Price and all products with 'karat' field will have their prices updated
 
 == Screenshots ==
@@ -37,7 +37,7 @@ Please notice that WooCommerce must be installed and active.
 
 = How many karats can be added/used? =
 
-* Only 24k, 22k and 18k
+* Only 24k, 22k, 18k and 14k
 
 = Do I need to calculate the price when adding a new gold product? =
 
@@ -49,7 +49,7 @@ Please notice that WooCommerce must be installed and active.
 
 = I see no products under "Gold priced products" ( WooCommerce -> Gold Price ) =
 
-* That is because you have no gold products, e.g., products with Custom Field named karat and values 22 or 24.
+* This is because you have no gold products, e.g., products with Custom Field named karat and values 24, 22, 18 or 14.
 
 = What "Product was on sale, can't calculate sale price" means? =
 
@@ -58,8 +58,14 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Changelog ==
 
+= 1.0.3 =
+* Fixed 'Product has zero weight, can't calculate price based on weight.' but product had weight
+* Added 14k option.
+* Improved message when there are no gold products.
 = 1.0.2 =
-* Fixed 'You do not have sufficient permissions to access this page.', added 18k
+* Fixed error 'You do not have sufficient permissions to access this page.'
+* Added 18k option.
+* Added message when there are no gold products.
 = 1.0.1 =
 * Fixed 'posts_per_page'		
 = 1.0 =
@@ -67,9 +73,11 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Upgrade Notice ==
 
+= 1.0.3 =
+* All users must upgrade.
 = 1.0.2 =
-* All users must upgrade
+* All users must upgrade.
 = 1.0.1 =
-* All users must upgrade
+* All users must upgrade.
 = 1.0 = 
 * Enjoy it.
