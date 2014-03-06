@@ -3,11 +3,11 @@
  * Plugin Name: WooCommerce Gold Price
  * Plugin URI: http://omniwp.com.br/plugins/woocommerce-gold-price/
  * Description: Adds a Gold Price for 14k/18k/22k/24k gold products, making easy to update their prices
- * Version: 1.0.3
- * Author: omniWP
+ * Version: 2.1
+ * Author: Gabriel Reguly
  * Author URI: http://omniwp.com.br
  * Requires at least: 3.0
- * Tested up to: 3.5.1
+ * Tested up to: 3.8.1
  *
  * Text Domain: woocommerce-gold-price
  * Domain Path: /languages/
@@ -67,7 +67,8 @@ function woocommerce_gold_price() {
 	function woocommerce_gold_price_admin_menu() {
 		global $menu, $woocommerce;
 		if ( current_user_can( 'manage_woocommerce' ) ) {
-			woocommerce_admin_css();
+
+			do_action( 'woocommerce_admin_css' );
 /*
 		//	add_submenu_page( $parent_slug, 
 				$page_title,

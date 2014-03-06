@@ -57,7 +57,8 @@ Please notice that WooCommerce must be installed and active.
 There is a handy link to edit the product, if one whishes to put it on sale again.
 
 == Changelog ==
-
+= 2.1 =
+* Updated to be compatible with WooCommerce 2.1
 = 1.0.3 =
 * Fixed 'Product has zero weight, can't calculate price based on weight.' but product had weight
 * Added 14k option.
@@ -73,6 +74,8 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Upgrade Notice ==
 
+= 2.1 =
+* Users of WooCommerce 2.1 must upgrade.
 = 1.0.3 =
 * All users must upgrade.
 = 1.0.2 =
