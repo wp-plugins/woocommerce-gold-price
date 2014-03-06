@@ -12,9 +12,6 @@
  * Text Domain: woocommerce-gold-price
  * Domain Path: /languages/
  *
- * @package WooCommerce-Gold-Price
- * @category Core
- * @author omniWP
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
