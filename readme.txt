@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds Gold Price extension to WooCommerce plugin, tested up to WooCommerce 2.0.8
+Adds Gold Price extension to WooCommerce plugin, tested up to WooCommerce 2.1.4
 
 == Description ==
 
