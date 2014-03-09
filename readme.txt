@@ -3,12 +3,12 @@ Contributors: Gabriel Reguly
 Donate link: http://omniwp.com.br/donate/
 Tags: WooCommerce, Gold Price, Gold Based prices 
 Requires at least:3.5
-Tested up to: 3.5.1
+Tested up to: 3.8.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds Gold Price extension to WooCommerce plugin, tested up to WooCommerce 2.1.4
+Adds Gold Price extension to WooCommerce plugin, tested up to WooCommerce 2.1.5
 
 == Description ==
 
@@ -37,7 +37,7 @@ Please notice that WooCommerce must be installed and active.
 
 = How many karats can be added/used? =
 
-* Only 24k, 22k, 18k and 14k
+* Only 24k, 22k, 18k and 14k. 
 
 = Do I need to calculate the price when adding a new gold product? =
 
@@ -49,7 +49,7 @@ Please notice that WooCommerce must be installed and active.
 
 = I see no products under "Gold priced products" ( WooCommerce -> Gold Price ) =
 
-* This is because you have no gold products, e.g., products with Custom Field named karat and values 24, 22, 18 or 14.
+* This is because you have no gold products, e.g., products with Custom Fields named karat and values 24, 22, 18 or 14.
 
 = What "Product was on sale, can't calculate sale price" means? =
 
@@ -57,6 +57,8 @@ Please notice that WooCommerce must be installed and active.
 There is a handy link to edit the product, if one whishes to put it on sale again.
 
 == Changelog ==
+= 2.1.1 =
+* Fixed admin screen where at products list it always showed 24k price, thanks cutter2222 for informing the issue
 = 2.1 =
 * Updated to be compatible with WooCommerce 2.1
 = 1.0.3 =
@@ -74,6 +76,8 @@ There is a handy link to edit the product, if one whishes to put it on sale agai
 
 == Upgrade Notice ==
 
+= 2.1.2 =
+* Error fixing, all users of version 2.1 must upgrade.
 = 2.1 =
 * Users of WooCommerce 2.1 must upgrade.
 = 1.0.3 =

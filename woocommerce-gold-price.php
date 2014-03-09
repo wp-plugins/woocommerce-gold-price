@@ -123,7 +123,11 @@ function woocommerce_gold_price() {
 	?>
 	<h3><?php echo $key ?></h3>
 	<?php
-			$the_query = new WP_Query( array( 'post_type' => 'product', 'posts_per_page'=>-1, 'meta_key' => 'karat', 'meta_value' => substr( $key, 0, -1) ) ); // meta value = 24, 22, 18
+			$the_query = new WP_Query( array( 
+				'post_type'      => 'product', 
+				'posts_per_page' => -1, 
+				'meta_key'       => 'karat', 
+				'meta_value'     => substr( $key, 0, -1 ) ) ); // meta values 24k, 22k, 18k, 14k  => 24, 22, 18, 14
 			if ( 0 == $the_query->found_posts ) { 
 				_e('No products', 'woocommerce-gold-price' );
 			} else {
@@ -144,7 +148,7 @@ function woocommerce_gold_price() {
 						if ( $the_product->is_on_sale() ) {
 							$message = __( 'Product was on sale, can\'t calculate sale price', 'woocommerce-gold-price' );
 						}
-						echo ': ' . $the_product->weight . $weight_unit_description[ $weight_unit ] . ' * ' . woocommerce_price( $options['24k'] )  . ' = ' . woocommerce_price( $the_product->regular_price );
+						echo ': ' . $the_product->weight . $weight_unit_description[ $weight_unit ] . ' * ' . woocommerce_price( $options[ $key ] )  . ' = ' . woocommerce_price( $the_product->regular_price );
 						if ( false !== $_REQUEST['settings-updated'] ) {
 							update_post_meta( $the_product->id, '_price',         $the_product->regular_price );
 							update_post_meta( $the_product->id, '_regular_price', $the_product->regular_price );
